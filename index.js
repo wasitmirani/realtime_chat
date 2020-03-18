@@ -19,7 +19,7 @@
 
 let app = require('express')();
 
-let http = require('http').Server(app);
+let http = require('http').createServer(app);
 
 let io = require('socket.io')(http);
 
@@ -58,8 +58,8 @@ io.on('connection', (socket) => {
 
 })
 
-// http.listen(3000, () => {
-//     console.log('Server is started at http://localhost:3000')
-// })
+http.listen(3000, () => {
+    console.log('Server is started at http://localhost:3000')
+})
 
-http.listen(process.env.PORT)
+// http.listen(process.env.PORT)
