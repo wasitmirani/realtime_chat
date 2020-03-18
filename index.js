@@ -58,7 +58,7 @@ io.on('connection', (socket) => {
 
 })
 
-http.listen(3000, () => {
+http.listen(80, () => {
     console.log('Server is started at http://localhost:3000')
 })
 
